@@ -1,186 +1,324 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Karima Couture</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+    font-family: Arial;
+    background:#f7f7f7;
+    margin:0;
+}
+
+header{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+nav{
+    background:white;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    margin:10px;
+    text-decoration:none;
+    color:#111;
+}
+
+.products{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    padding:20px;
+}
+
+.product{
+    background:white;
+    width:280px;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.product img{
+    width:100%;
+    border-radius:10px;
+}
+
+select,input,button{
+    width:90%;
+    padding:12px;
+    margin:8px;
+}
+
+button{
+    background:#111;
+    color:white;
+    border:0;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.order{
+    background:white;
+    margin:20px auto;
+    padding:20px;
+    max-width:500px;
+    border-radius:10px;
+}
+
+</style>
+
 </head>
+
 
 <body>
 
+
 <header>
-<h1>Karima Couture</h1>
+
+<h1>Karima Couture 👗</h1>
+
 <p>أناقة المرأة الجزائرية 🇩🇿</p>
+
 </header>
 
+
 <nav>
+
 <a href="#">الرئيسية</a>
 <a href="#">فساتين</a>
-<a href="#">عبايات</a>
-<a href="#">بلوزات</a>
-<a href="#">بناطيل</a>
-<a href="#">جاكيتات</a>
+<a href="#">قنادر</a>
+
 </nav>
+
 
 <section class="products">
 
+
 <div class="product">
-<img src="images/dress1.jpg.jpg" alt="قندورة 1">
+
+<img src="images/dress1.jpg.jpg">
+
 <h2>قندورة أنيقة</h2>
+
 <p>السعر: 3500 دج</p>
-  <label>المقاس:</label>
+
 <select>
-<option>48</option>
-<option>50/option>
-<option>52/option>
-<option>54</option>
-<option>56</option>
+<option>المقاس 46</option>
+<option>المقاس 48</option>
+<option>المقاس 50</option>
+<option>المقاس 52</option>
 </select>
 
-<br>
-
-<label>اللون:</label>
 <select>
-<option>أسود</option>
-<option>أبيض</option>
-<option>بيج</option>
-<option>أحمر</option>
+<option>اللون: حسب الصورة</option>
 </select>
-<button>اطلب الآن</button>
+
+
+<button onclick="selectProduct('قندورة أنيقة','3500')">
+اطلب الآن
+</button>
+
+
 </div>
 
+
+
 <div class="product">
-<img src="images/dress2.jpg.jpg" alt="قندورة 2">
+
+<img src="images/dress2.jpg.jpg">
+
 <h2>قندورة فاخرة</h2>
+
 <p>السعر: 4500 دج</p>
-  <label>المقاس:</label>
+
 <select>
-<option>48</option>
-<option>50/option>
-<option>52/option>
-<option>54</option>
-<option>56</option>
+<option>المقاس 46</option>
+<option>المقاس 48</option>
+<option>المقاس 50</option>
+<option>المقاس 52</option>
 </select>
 
-<br>
-
-<label>اللون:</label>
 <select>
-<option>أسود</option>
-<option>أبيض</option>
-<option>بيج</option>
-<option>أحمر</option>
+<option>اللون: حسب الصورة</option>
 </select>
-<button>اطلب الآن</button>
-</div>
+
+
+<button onclick="selectProduct('قندورة فاخرة','4500')">
+اطلب الآن
+</button>
+
 
 <div class="product">
-<img src="images/dress3.jpg.jpg" alt="فستان 1">
+
+<img src="images/dress3.jpg.jpg">
+
 <h2>فستان نسائي</h2>
+
 <p>السعر: 3500 دج</p>
-  <label>المقاس:</label>
+
 <select>
-<option>48</option>
-<option>50/option>
-<option>52/option>
-<option>54</option>
-<option>56</option>
+<option>المقاس 46</option>
+<option>المقاس 48</option>
+<option>المقاس 50</option>
+<option>المقاس 52</option>
 </select>
 
-<br>
-
-<label>اللون:</label>
 <select>
-<option>أسود</option>
-<option>أبيض</option>
-<option>بيج</option>
-<option>أحمر</option>
+<option>اللون: حسب الصورة</option>
 </select>
-<button>اطلب الآن</button>
+
+
+<button onclick="selectProduct('فستان نسائي','3500')">
+اطلب الآن
+</button>
+
 </div>
 
+
+
 <div class="product">
-<img src="images/dress4.jpg.jpg" alt="فستان 2">
+
+<img src="images/dress4.jpg.jpg">
+
 <h2>فستان راقي</h2>
+
 <p>السعر: 3500 دج</p>
-  <label>المقاس:</label>
-<select>
-<option>48</option>
-<option>50/option>
-<option>52/option>
-<option>54</option>
-<option>56</option>
 
-<br>
-
-<label>اللون:</label>
 <select>
-<option>أسود</option>
-<option>أبيض</option>
-<option>بيج</option>
-<option>أحمر</option>
+<option>المقاس 46</option>
+<option>المقاس 48</option>
+<option>المقاس 50</option>
+<option>المقاس 52</option>
 </select>
-<button>اطلب الآن</button>
+
+<select>
+<option>اللون: حسب الصورة</option>
+</select>
+
+
+<button onclick="selectProduct('فستان راقي','3500')">
+اطلب الآن
+</button>
+
 </div>
+
+
+
 <div class="product">
-<img src="images/dress5.jpg.jpg" alt="قندورة 3">
-<h2>قندورة عصرية</h2>
-<p>السعر: 3500 دج</p>
-  <label>المقاس:</label>
-<select>
-<option>48</option>
-<option>50/option>
-<option>52/option>
-<option>54</option>
-<option>56</option>
-</select>
-<br>
 
-<label>اللون:</label>
+<img src="images/dress5.jpg.jpg">
+
+<h2>قندورة عصرية</h2>
+
+<p>السعر: 3500 دج</p>
+
 <select>
-<option>أسود</option>
-<option>أبيض</option>
-<option>بيج</option>
-<option>أحمر</option>
+<option>المقاس 46</option>
+<option>المقاس 48</option>
+<option>المقاس 50</option>
+<option>المقاس 52</option>
 </select>
-<a href="order.html">
-<button>اطلب الآن</button>
-</a>
+
+<select>
+<option>اللون: حسب الصورة</option>
+</select>
+
+
+<button onclick="selectProduct('قندورة عصرية','3500')">
+اطلب الآن
+</button>
+
 </div>
+
 
 </section>
-<section class="order-form">
+
+
+
+<section class="order">
+
 
 <h2>طلب الشراء</h2>
 
-<input type="text" placeholder="الاسم واللقب">
 
-<input type="tel" placeholder="رقم الهاتف">
+<input id="name" placeholder="الاسم واللقب">
 
-<label>الولاية:</label>
+
+<input id="phone" placeholder="رقم الهاتف">
+
+
+<label>الولاية</label>
+
 <select id="wilaya" onchange="loadCommunes()">
+
 <option>اختر الولاية</option>
-<option>أم البواقي</option>
-<option>قسنطينة</option>
-<option>باتنة</option>
-<option>الجزائر</option>
-<option>وهران</option>
+
 </select>
 
-<label>البلدية:</label>
+
+
+<label>البلدية</label>
+
 <select id="commune">
+
 <option>اختر البلدية</option>
+
 </select>
 
-<button>إرسال الطلب</button>
+
+
+<input id="product" placeholder="المنتج">
+
+
+<input id="price" placeholder="السعر">
+
+
+
+<button>
+إرسال الطلب
+</button>
+
 
 </section>
+
+
+
+<footer>
+
+<p>
+© 2026 Karima Couture - الجزائر
+</p>
+
+</footer>
+
 
 
 <script>
 
-const communes = {
+
+function selectProduct(name,price){
+
+document.getElementById("product").value=name;
+
+document.getElementById("price").value=price+" دج";
+
+}
+
+
+
+const data = {
+
 
 "أم البواقي":[
 "أم البواقي",
@@ -189,11 +327,13 @@ const communes = {
 "عين فكرون"
 ],
 
+
 "قسنطينة":[
 "قسنطينة",
 "الخروب",
 "عين سمارة"
 ],
+
 
 "باتنة":[
 "باتنة",
@@ -201,11 +341,13 @@ const communes = {
 "مروانة"
 ],
 
+
 "الجزائر":[
 "الجزائر الوسطى",
 "باب الوادي",
 "الحراش"
 ],
+
 
 "وهران":[
 "وهران",
@@ -213,34 +355,58 @@ const communes = {
 "أرزيو"
 ]
 
+
 };
+
+
+
+let w=document.getElementById("wilaya");
+
+
+for(let city in data){
+
+let option=document.createElement("option");
+
+option.text=city;
+
+w.add(option);
+
+}
+
 
 
 function loadCommunes(){
 
-let w=document.getElementById("wilaya").value;
+
+let wilaya=w.value;
+
 let c=document.getElementById("commune");
+
 
 c.innerHTML="";
 
-if(communes[w]){
 
-communes[w].forEach(function(city){
+data[wilaya].forEach(function(x){
+
 
 let option=document.createElement("option");
-option.text=city;
+
+option.text=x;
+
 c.add(option);
+
 
 });
 
-}
 
 }
+
+
 
 </script>
-<footer>
-<p>© 2026 Karima Couture - الجزائر</p>
-</footer>
+
 
 </body>
+
 </html>
+</div>
