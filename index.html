@@ -803,6 +803,58 @@ let commune=document.getElementById("commune");
 commune.innerHTML='<option>اختر البلدية</option>';
 
 
+<script>
+
+let data = {
+
+"الجزائر":[
+"باب الواد",
+"الحراش",
+"الدار البيضاء"
+],
+
+"وهران":[
+"وهران",
+"السانية",
+"بئر الجير"
+],
+
+"قسنطينة":[
+"قسنطينة",
+"الخروب",
+"حامة بوزيان"
+]
+
+};
+
+
+
+let wilaya=document.getElementById("wilaya");
+
+
+for(let w in data){
+
+let option=document.createElement("option");
+
+option.textContent=w;
+option.value=w;
+
+wilaya.appendChild(option);
+
+}
+
+
+
+
+function loadCommunes(){
+
+let w=document.getElementById("wilaya").value;
+
+let commune=document.getElementById("commune");
+
+
+commune.innerHTML="";
+
 
 if(data[w]){
 
@@ -820,6 +872,9 @@ commune.appendChild(option);
 }
 
 }
+
+
+
 </script>
 let data = {
 "الجزائر": [
