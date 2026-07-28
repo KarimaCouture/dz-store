@@ -317,46 +317,47 @@ document.getElementById("price").value=price+" دج";
 
 
 
-const data = {
+let data = {};
+
+fetch("algeria.json")
+.then(response => response.json())
+.then(json => {
+
+data = json;
+
+let wilaya = document.getElementById("wilaya");
+
+for(let w in data){
+
+let option = document.createElement("option");
+option.text = w;
+option.value = w;
+wilaya.add(option);
+
+}
+
+});
 
 
-"أم البواقي":[
-"أم البواقي",
-"عين البيضاء",
-"عين مليلة",
-"عين فكرون"
-],
+function loadCommunes(){
 
+let w = document.getElementById("wilaya").value;
 
-"قسنطينة":[
-"قسنطينة",
-"الخروب",
-"عين سمارة"
-],
+let commune = document.getElementById("commune");
 
+commune.innerHTML="";
 
-"باتنة":[
-"باتنة",
-"بريكة",
-"مروانة"
-],
+data[w].forEach(function(c){
 
+let option = document.createElement("option");
+option.text = c;
+option.value = c;
 
-"الجزائر":[
-"الجزائر الوسطى",
-"باب الوادي",
-"الحراش"
-],
+commune.add(option);
 
+});
 
-"وهران":[
-"وهران",
-"السانية",
-"أرزيو"
-]
-
-
-};
+}
 
 
 
