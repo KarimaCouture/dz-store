@@ -294,7 +294,18 @@ border-radius:10px;
 
 
 <h2>طلب الشراء</h2>
+<label>الولاية</label>
 
+<select id="wilaya" onchange="loadCommunes()">
+<option value="">اختر الولاية</option>
+</select>
+
+
+<label>البلدية</label>
+
+<select id="commune">
+<option value="">اختر البلدية</option>
+</select>
 
 <input id="name" placeholder="الاسم واللقب">
 
@@ -369,7 +380,82 @@ alert(
 
 }
 
+let data = {
 
+"أدرار":[
+"أدرار",
+"تامست",
+"رقان",
+"فنوغيل"
+],
+
+"الشلف":[
+"الشلف",
+"تنس",
+"بوقادير"
+],
+
+"الجزائر":[
+"الجزائر الوسطى",
+"باب الواد",
+"الحراش",
+"الدار البيضاء"
+],
+
+"وهران":[
+"وهران",
+"السانية",
+"بئر الجير",
+"بطيوة"
+]
+
+};
+
+
+
+let wilaya = document.getElementById("wilaya");
+
+
+for(let w in data){
+
+let option=document.createElement("option");
+
+option.textContent=w;
+option.value=w;
+
+wilaya.appendChild(option);
+
+}
+
+
+
+function loadCommunes(){
+
+let w=document.getElementById("wilaya").value;
+
+let commune=document.getElementById("commune");
+
+
+commune.innerHTML='<option>اختر البلدية</option>';
+
+
+
+if(data[w]){
+
+data[w].forEach(function(c){
+
+let option=document.createElement("option");
+
+option.textContent=c;
+option.value=c;
+
+commune.appendChild(option);
+
+});
+
+}
+
+}
 </script>
 
 
