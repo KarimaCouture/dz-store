@@ -319,7 +319,7 @@ document.getElementById("price").value=price+" دج";
 
 let data = {};
 
-fetch("algeria.json")
+fetch("./algeria.json")
 .then(response => response.json())
 .then(json => {
 
@@ -332,12 +332,15 @@ for(let w in data){
 let option = document.createElement("option");
 option.text = w;
 option.value = w;
+
 wilaya.add(option);
 
 }
 
+})
+.catch(error => {
+console.log("خطأ في تحميل الولايات:", error);
 });
-
 function loadCommunes(){
 
 let w = document.getElementById("wilaya").value;
