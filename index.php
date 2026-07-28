@@ -4,9 +4,11 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Karima Couture</title>
+
 
 <style>
 
@@ -18,116 +20,153 @@ padding:0;
 direction:rtl;
 }
 
+
 header{
+
 background:#111;
 color:white;
 text-align:center;
 padding:25px;
+
 }
+
 
 header h1{
+
 margin:0;
+
 }
 
-header p{
-margin-top:10px;
-}
 
 nav{
+
 background:white;
 padding:15px;
 text-align:center;
-box-shadow:0 2px 5px rgba(0,0,0,.1);
+
 }
 
+
 nav a{
+
 text-decoration:none;
 color:#111;
 margin:0 12px;
 font-weight:bold;
+
 }
 
+
+
 .products{
+
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
 gap:20px;
 padding:20px;
+
 }
 
+
+
 .product{
+
 background:white;
 width:280px;
 padding:15px;
 border-radius:10px;
 box-shadow:0 2px 8px rgba(0,0,0,.1);
 text-align:center;
+
 }
 
+
+
 .product img{
+
 width:100%;
 height:350px;
 object-fit:cover;
 border-radius:10px;
+
 }
 
-.product h2{
-margin:10px 0;
-}
+
 
 .product p{
+
 font-size:18px;
 color:#444;
+
 }
 
-select,
-input,
-button{
+
+
+select,input,button{
+
 width:90%;
 padding:12px;
 margin:8px 0;
 border-radius:6px;
 border:1px solid #ccc;
 font-size:16px;
+
 }
 
+
+
 button{
+
 background:#111;
 color:white;
 border:none;
 cursor:pointer;
+
 }
+
 
 button:hover{
+
 background:#444;
+
 }
 
+
+
 .order{
+
 background:white;
 max-width:500px;
 margin:30px auto;
 padding:20px;
 border-radius:10px;
 box-shadow:0 2px 8px rgba(0,0,0,.1);
+
 }
 
-.order h2{
-text-align:center;
-}
+
 
 footer{
+
 background:#111;
 color:white;
 text-align:center;
 padding:20px;
 margin-top:30px;
+
 }
+
 
 </style>
 
+
 </head>
 
+
 <body>
+
+
 
 <header>
 
@@ -137,170 +176,272 @@ margin-top:30px;
 
 </header>
 
+
+
 <nav>
 
 <a href="#">الرئيسية</a>
+
 <a href="#">فساتين</a>
+
 <a href="#">قنادر</a>
 
 </nav>
 
-<section class="products">
-  <div class="product">
 
-<img src="images/dress1.jpg.jpg" alt="قندورة أنيقة">
+
+
+<section class="products">
+
+
+
+<div class="product">
+
+<img src="images/dress1.jpg.jpg">
 
 <h2>قندورة أنيقة</h2>
 
 <p>السعر: 3500 دج</p>
 
+
 <select>
+
 <option>المقاس 46</option>
 <option>المقاس 48</option>
 <option>المقاس 50</option>
 <option>المقاس 52</option>
+
 </select>
+
 
 <p>اللون: حسب الصورة</p>
 
+
 <button onclick="selectProduct('قندورة أنيقة','3500')">
+
 اطلب الآن
+
 </button>
+
 
 </div>
 
 
 
+
 <div class="product">
 
-<img src="images/dress2.jpg.jpg" alt="قندورة فاخرة">
+<img src="images/dress2.jpg.jpg">
 
 <h2>قندورة فاخرة</h2>
 
 <p>السعر: 4500 دج</p>
 
+
 <select>
+
 <option>المقاس 46</option>
 <option>المقاس 48</option>
 <option>المقاس 50</option>
 <option>المقاس 52</option>
+
 </select>
+
 
 <p>اللون: حسب الصورة</p>
 
+
 <button onclick="selectProduct('قندورة فاخرة','4500')">
+
 اطلب الآن
+
 </button>
 
+
 </div>
-
-
-
 <div class="product">
 
-<img src="images/dress3.jpg.jpg" alt="فستان نسائي">
+<img src="images/dress3.jpg.jpg">
 
 <h2>فستان نسائي</h2>
 
 <p>السعر: 3500 دج</p>
 
+
 <select>
+
 <option>المقاس 46</option>
 <option>المقاس 48</option>
 <option>المقاس 50</option>
 <option>المقاس 52</option>
+
 </select>
+
 
 <p>اللون: حسب الصورة</p>
 
+
 <button onclick="selectProduct('فستان نسائي','3500')">
+
 اطلب الآن
+
 </button>
+
 
 </div>
 
 
 
+
 <div class="product">
 
-<img src="images/dress4.jpg.jpg" alt="فستان راقي">
+<img src="images/dress4.jpg.jpg">
 
 <h2>فستان راقي</h2>
 
 <p>السعر: 3500 دج</p>
 
+
 <select>
+
 <option>المقاس 46</option>
 <option>المقاس 48</option>
 <option>المقاس 50</option>
 <option>المقاس 52</option>
+
 </select>
+
 
 <p>اللون: حسب الصورة</p>
 
+
 <button onclick="selectProduct('فستان راقي','3500')">
+
 اطلب الآن
+
 </button>
 
+
 </div>
+
 
 
 
 <div class="product">
 
-<img src="images/dress5.jpg.jpg" alt="قندورة عصرية">
+<img src="images/dress5.jpg.jpg">
 
 <h2>قندورة عصرية</h2>
 
 <p>السعر: 3500 دج</p>
 
+
 <select>
+
 <option>المقاس 46</option>
 <option>المقاس 48</option>
 <option>المقاس 50</option>
 <option>المقاس 52</option>
+
 </select>
+
 
 <p>اللون: حسب الصورة</p>
 
+
 <button onclick="selectProduct('قندورة عصرية','3500')">
+
 اطلب الآن
+
 </button>
+
 
 </div>
 
+
 </section>
+
+
+
+
+
 <section class="order">
+
 
 <h2>طلب الشراء</h2>
 
-<input
+
+
+<input 
 id="name"
 type="text"
 placeholder="الاسم واللقب">
 
-<input
+
+
+<input 
 id="phone"
 type="tel"
 placeholder="رقم الهاتف">
 
-<input
+
+
+<label>الولاية</label>
+
+
+<select id="wilaya" onchange="loadCommunes()">
+
+<option value="">
+اختر الولاية
+</option>
+
+</select>
+
+
+
+<label>البلدية</label>
+
+
+<select id="commune">
+
+<option value="">
+اختر البلدية
+</option>
+
+</select>
+
+
+
+
+<input 
 id="product"
 type="text"
 placeholder="المنتج"
 readonly>
 
-<input
+
+
+<input 
 id="price"
 type="text"
 placeholder="السعر"
 readonly>
 
+
+
+
 <button onclick="sendOrder()">
+
 إرسال الطلب
+
 </button>
 
+
+
 </section>
+
+
+
 
 <footer>
 
@@ -309,102 +450,210 @@ readonly>
 </p>
 
 </footer>
-
 <script>
-  <script>
+
 
 function selectProduct(name,price){
 
-document.getElementById("product").value = name;
+document.getElementById("product").value=name;
 
-document.getElementById("price").value = price + " دج";
+document.getElementById("price").value=price+" دج";
 
 }
 
+
+
+
+// الولايات والبلديات
+
 let data = {
 
-"أدرار":[
-"أدرار",
-"تامست",
-"رقان",
-"فنوغيل",
-"زاوية كنتة",
-"تسابيت",
-"تمنطيط"
+
+"الجزائر":[
+
+"باب الواد",
+
+"الحراش",
+
+"الدار البيضاء",
+
+"براقي"
+
+],
+
+
+
+"وهران":[
+
+"وهران",
+
+"السانية",
+
+"بئر الجير",
+
+"أرزيو"
+
+],
+
+
+
+"قسنطينة":[
+
+"قسنطينة",
+
+"الخروب",
+
+"حامة بوزيان",
+
+"عين سمارة"
+
 ]
 
+
 };
+
+
+
 
 
 let wilaya = document.getElementById("wilaya");
 
 
+
+// إضافة الولايات
+
 for(let w in data){
+
 
 let option = document.createElement("option");
 
+
 option.textContent = w;
+
 option.value = w;
 
+
 wilaya.appendChild(option);
+
 
 }
 
 
+
+
+
+
+// تحميل البلديات
+
 function loadCommunes(){
 
-let w = wilaya.value;
+
+let w = document.getElementById("wilaya").value;
+
 
 let commune = document.getElementById("commune");
 
-commune.innerHTML = '<option>اختر البلدية</option>';
+
+commune.innerHTML = "";
+
+
+
+let first = document.createElement("option");
+
+first.textContent="اختر البلدية";
+
+commune.appendChild(first);
+
+
+
+
+if(data[w]){
 
 
 data[w].forEach(function(c){
 
+
 let option = document.createElement("option");
 
-option.textContent = c;
-option.value = c;
+
+option.textContent=c;
+
+option.value=c;
+
 
 commune.appendChild(option);
 
+
 });
 
+
 }
+
+
+}
+
+
+
+
+
+
+
+// إرسال الطلب
+
+function sendOrder(){
+
+
 
 let name = document.getElementById("name").value;
 
 let phone = document.getElementById("phone").value;
+
+let wilaya = document.getElementById("wilaya").value;
+
+let commune = document.getElementById("commune").value;
 
 let product = document.getElementById("product").value;
 
 let price = document.getElementById("price").value;
 
 
+
+
 if(name==="" || phone===""){
+
 
 alert("يرجى إدخال الاسم ورقم الهاتف");
 
+
 return;
 
+
 }
+
+
 
 
 alert(
+
 "تم إرسال الطلب\n\n"+
+
 "الاسم: "+name+
+
 "\nالهاتف: "+phone+
+
+"\nالولاية: "+wilaya+
+
+"\nالبلدية: "+commune+
+
 "\nالمنتج: "+product+
+
 "\nالسعر: "+price
+
+
 );
-
-}
-
-
+  
 </script>
 
 
 </body>
-
 </html>
