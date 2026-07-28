@@ -2,51 +2,16 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>طلب شراء - Karima Couture</title>
-<style>
-body{
-    font-family: Arial;
-    background:#f8f8f8;
-    padding:20px;
-}
-.container{
-    max-width:500px;
-    margin:auto;
-    background:white;
-    padding:20px;
-    border-radius:10px;
-}
-input, select, button{
-    width:100%;
-    padding:12px;
-    margin:8px 0;
-    font-size:16px;
-}
-button{
-    background:#000;
-    color:white;
-    border:none;
-    cursor:pointer;
-}
-</style>
+<title>Karima Couture</title>
 </head>
 
 <body>
 
-<div class="container">
-
-<h2>Karima Couture 👗</h2>
-<h3>طلب شراء</h3>
-
-<label>الاسم واللقب</label>
-<input type="text" placeholder="اكتب الاسم واللقب">
-
-<label>رقم الهاتف</label>
-<input type="tel" placeholder="05xxxxxxxx">
+<h2>طلب شراء</h2>
 
 <label>الولاية</label>
-<label>الولاية</label>
-<select id="wilaya" onchange="changeCommune()">
+
+<select>
 <option>اختر الولاية</option>
 <option>أم البواقي</option>
 <option>قسنطينة</option>
@@ -54,66 +19,6 @@ button{
 <option>الجزائر</option>
 <option>وهران</option>
 </select>
-
-<label>البلدية</label>
-<select id="commune">
-<option>اختر البلدية</option>
-</select>
-
-<label>المنتج</label>
-<select>
-<option>قندورة أنيقة</option>
-<option>قندورة فاخرة</option>
-<option>فستان نسائي</option>
-</select>
-
-<label>المقاس</label>
-<select>
-<option>S</option>
-<option>M</option>
-<option>L</option>
-<option>XL</option>
-</select>
-
-<label>اللون</label>
-<select>
-<option>أسود</option>
-<option>أبيض</option>
-<option>بيج</option>
-<option>أحمر</option>
-</select>
-
-<button>إرسال الطلب</button>
-
-</div>
-
-<script>
-function changeCommune(){
-
-let wilaya=document.getElementById("wilaya").value;
-let commune=document.getElementById("commune");
-
-commune.innerHTML="";
-
-if(wilaya=="أم البواقي"){
-commune.innerHTML += "<option>أم البواقي</option>";
-commune.innerHTML += "<option>عين البيضاء</option>";
-commune.innerHTML += "<option>عين مليلة</option>";
-commune.innerHTML += "<option>عين فكرون</option>";
-}
-
-else if(wilaya=="قسنطينة"){
-commune.innerHTML += "<option>قسنطينة</option>";
-commune.innerHTML += "<option>الخروب</option>";
-commune.innerHTML += "<option>عين سمارة</option>";
-}
-
-else{
-commune.innerHTML="<option>اختر البلدية</option>";
-}
-
-}
-</script>
 
 </body>
 </html>
