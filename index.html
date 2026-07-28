@@ -426,8 +426,8 @@ document.getElementById("price").value=price+" دج";
 let data={};
 
 
-fetch("./algeria.json")
-.then(response => {
+fetch("/algeria.json")
+  .then(response => {
 
 if(!response.ok){
 throw new Error("ملف algeria.json غير موجود");
