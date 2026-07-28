@@ -57,25 +57,31 @@ border-radius:10px;
 }
 
 select,input,button{
+
 width:90%;
 padding:12px;
 margin:8px;
+
 }
 
 button{
+
 background:#111;
 color:white;
 border:0;
 cursor:pointer;
 border-radius:5px;
+
 }
 
 .order{
+
 background:white;
 margin:20px auto;
 padding:20px;
 max-width:500px;
 border-radius:10px;
+
 }
 
 </style>
@@ -95,6 +101,7 @@ border-radius:10px;
 </header>
 
 
+
 <nav>
 
 <a href="#">الرئيسية</a>
@@ -108,6 +115,7 @@ border-radius:10px;
 <section class="products">
 
 
+
 <div class="product">
 
 <img src="images/dress1.jpg.jpg">
@@ -118,10 +126,12 @@ border-radius:10px;
 
 
 <select>
+
 <option>المقاس 46</option>
 <option>المقاس 48</option>
 <option>المقاس 50</option>
 <option>المقاس 52</option>
+
 </select>
 
 
@@ -129,10 +139,14 @@ border-radius:10px;
 
 
 <button onclick="selectProduct('قندورة أنيقة','3500')">
+
 اطلب الآن
+
 </button>
 
+
 </div>
+
 
 
 
@@ -146,10 +160,12 @@ border-radius:10px;
 
 
 <select>
+
 <option>المقاس 46</option>
 <option>المقاس 48</option>
 <option>المقاس 50</option>
 <option>المقاس 52</option>
+
 </select>
 
 
@@ -157,10 +173,14 @@ border-radius:10px;
 
 
 <button onclick="selectProduct('قندورة فاخرة','4500')">
+
 اطلب الآن
+
 </button>
 
+
 </div>
+
 
 
 
@@ -174,10 +194,12 @@ border-radius:10px;
 
 
 <select>
+
 <option>المقاس 46</option>
 <option>المقاس 48</option>
 <option>المقاس 50</option>
 <option>المقاس 52</option>
+
 </select>
 
 
@@ -185,10 +207,86 @@ border-radius:10px;
 
 
 <button onclick="selectProduct('فستان نسائي','3500')">
+
 اطلب الآن
+
 </button>
 
+
 </div>
+
+
+
+
+<div class="product">
+
+<img src="images/dress4.jpg.jpg">
+
+<h2>فستان راقي</h2>
+
+<p>السعر: 3500 دج</p>
+
+
+<select>
+
+<option>المقاس 46</option>
+<option>المقاس 48</option>
+<option>المقاس 50</option>
+<option>المقاس 52</option>
+
+</select>
+
+
+<p>اللون: حسب الصورة</p>
+
+
+<button onclick="selectProduct('فستان راقي','3500')">
+
+اطلب الآن
+
+</button>
+
+
+</div>
+
+
+
+
+<div class="product">
+
+<img src="images/dress5.jpg.jpg">
+
+<h2>قندورة عصرية</h2>
+
+<p>السعر: 3500 دج</p>
+
+
+<select>
+
+<option>المقاس 46</option>
+<option>المقاس 48</option>
+<option>المقاس 50</option>
+<option>المقاس 52</option>
+
+</select>
+
+
+<p>اللون: حسب الصورة</p>
+
+
+<button onclick="selectProduct('قندورة عصرية','3500')">
+
+اطلب الآن
+
+</button>
+
+
+</div>
+
+
+
+</section>
+
 
 
 
@@ -202,24 +300,6 @@ border-radius:10px;
 
 
 <input id="phone" placeholder="رقم الهاتف">
-
-
-<label>الولاية</label>
-
-<select id="wilaya" onchange="loadCommunes()">
-
-<option value="">اختر الولاية</option>
-
-</select>
-
-
-<label>البلدية</label>
-
-<select id="commune">
-
-<option value="">اختر البلدية</option>
-
-</select>
 
 
 <input id="product" placeholder="المنتج">
@@ -236,7 +316,10 @@ border-radius:10px;
 
 
 </section>
- id="b8k42"
+
+
+
+
 <footer>
 
 <p>
@@ -261,153 +344,24 @@ document.getElementById("price").value=price+" دج";
 
 
 
-let data = {};
-
-
-
-fetch("/algeria.json")
-
-.then(response => {
-
-if(!response.ok){
-
-throw new Error("لم يتم العثور على algeria.json");
-
-}
-
-return response.json();
-
-})
-
-
-.then(json => {
-
-
-data = json;
-
-
-let wilaya = document.getElementById("wilaya");
-
-
-
-for(let w in data){
-
-
-let option = document.createElement("option");
-
-
-option.textContent = w;
-
-option.value = w;
-
-
-wilaya.appendChild(option);
-
-
-}
-
-
-})
-
-
-.catch(error => {
-
-
-console.log(error);
-
-
-});
-
-
-
-
-
-function loadCommunes(){
-
-
-let w = document.getElementById("wilaya").value;
-
-
-let commune = document.getElementById("commune");
-
-
-commune.innerHTML =
-
-'<option value="">اختر البلدية</option>';
-
-
-
-if(data[w]){
-
-
-data[w].forEach(function(c){
-
-
-let option = document.createElement("option");
-
-
-option.textContent = c;
-
-option.value = c;
-
-
-commune.appendChild(option);
-
-
-
-});
-
-
-}
-
-
-}
-
-
-
-
-
-
 function sendOrder(){
 
 
-let name =
-document.getElementById("name").value;
+let name=document.getElementById("name").value;
 
+let phone=document.getElementById("phone").value;
 
-let phone =
-document.getElementById("phone").value;
+let product=document.getElementById("product").value;
 
-
-let wilaya =
-document.getElementById("wilaya").value;
-
-
-let commune =
-document.getElementById("commune").value;
-
-
-let product =
-document.getElementById("product").value;
-
-
-let price =
-document.getElementById("price").value;
+let price=document.getElementById("price").value;
 
 
 
 alert(
 
 "الاسم: "+name+
-
 "\nالهاتف: "+phone+
-
-"\nالولاية: "+wilaya+
-
-"\nالبلدية: "+commune+
-
 "\nالمنتج: "+product+
-
 "\nالسعر: "+price
 
 );
@@ -417,6 +371,7 @@ alert(
 
 
 </script>
+
 
 
 </body>
