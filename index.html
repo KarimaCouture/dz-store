@@ -426,15 +426,17 @@ document.getElementById("price").value=price+" دج";
 let data={};
 
 
+fetch("./algeria.json")
+.then(response => {
 
-fetch("algeria.json")
+if(!response.ok){
+throw new Error("ملف algeria.json غير موجود");
+}
 
+return response.json();
 
-.then(response=>response.json())
-
-
+})
 .then(json=>{
-
 
 data=json;
 
