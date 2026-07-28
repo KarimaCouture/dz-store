@@ -150,7 +150,94 @@
 </div>
 
 </section>
+<section class="order-form">
 
+<h2>طلب الشراء</h2>
+
+<input type="text" placeholder="الاسم واللقب">
+
+<input type="tel" placeholder="رقم الهاتف">
+
+<label>الولاية:</label>
+<select id="wilaya" onchange="loadCommunes()">
+<option>اختر الولاية</option>
+<option>أم البواقي</option>
+<option>قسنطينة</option>
+<option>باتنة</option>
+<option>الجزائر</option>
+<option>وهران</option>
+</select>
+
+<label>البلدية:</label>
+<select id="commune">
+<option>اختر البلدية</option>
+</select>
+
+<button>إرسال الطلب</button>
+
+</section>
+
+
+<script>
+
+const communes = {
+
+"أم البواقي":[
+"أم البواقي",
+"عين البيضاء",
+"عين مليلة",
+"عين فكرون"
+],
+
+"قسنطينة":[
+"قسنطينة",
+"الخروب",
+"عين سمارة"
+],
+
+"باتنة":[
+"باتنة",
+"بريكة",
+"مروانة"
+],
+
+"الجزائر":[
+"الجزائر الوسطى",
+"باب الوادي",
+"الحراش"
+],
+
+"وهران":[
+"وهران",
+"السانية",
+"أرزيو"
+]
+
+};
+
+
+function loadCommunes(){
+
+let w=document.getElementById("wilaya").value;
+let c=document.getElementById("commune");
+
+c.innerHTML="";
+
+if(communes[w]){
+
+communes[w].forEach(function(city){
+
+let option=document.createElement("option");
+option.text=city;
+c.add(option);
+
+});
+
+}
+
+}
+
+</script>
 <footer>
 <p>© 2026 Karima Couture - الجزائر</p>
 </footer>
