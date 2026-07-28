@@ -338,7 +338,6 @@ wilaya.add(option);
 
 });
 
-
 function loadCommunes(){
 
 let w = document.getElementById("wilaya").value;
@@ -346,6 +345,8 @@ let w = document.getElementById("wilaya").value;
 let commune = document.getElementById("commune");
 
 commune.innerHTML="";
+
+if(data[w]){
 
 data[w].forEach(function(c){
 
@@ -359,6 +360,7 @@ commune.add(option);
 
 }
 
+}
 
 
 
