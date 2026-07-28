@@ -322,36 +322,56 @@ document.getElementById("price").value = price + " دج";
 }
 
 let data = {
+
 "أدرار":[
 "أدرار",
 "تامست",
-"فنوغيل",
-"تمنطيط",
-"تسابيت",
-"تيميمون",
-"أولاد سعيد",
-"زاوية كنتة",
 "رقان",
-"سالي",
-"أولف",
-"تيت",
-"تامنطيت",
-"إن زغمير",
-"اقبلي",
-"بودة",
-"أسبع",
-"تيمياوين",
-"برج باجي مختار",
-"دلدول",
-"شروين",
-"طالمين",
-"قصر قدور",
-"أوقروت",
-"المطارفة",
-"بودة"
-],
+"فنوغيل",
+"زاوية كنتة",
+"تسابيت",
+"تمنطيط"
+]
 
-function sendOrder(){
+};
+
+
+let wilaya = document.getElementById("wilaya");
+
+
+for(let w in data){
+
+let option = document.createElement("option");
+
+option.textContent = w;
+option.value = w;
+
+wilaya.appendChild(option);
+
+}
+
+
+function loadCommunes(){
+
+let w = wilaya.value;
+
+let commune = document.getElementById("commune");
+
+commune.innerHTML = '<option>اختر البلدية</option>';
+
+
+data[w].forEach(function(c){
+
+let option = document.createElement("option");
+
+option.textContent = c;
+option.value = c;
+
+commune.appendChild(option);
+
+});
+
+}
 
 let name = document.getElementById("name").value;
 
