@@ -83,32 +83,41 @@ border:0;
 
 <script>
 
+function changeCommune(){<script>
+
+let communes = {};
+
+fetch("algeria.json")
+.then(response => response.json())
+.then(data => {
+    communes = data;
+});
+
+
 function changeCommune(){
 
-let w=document.getElementById("wilaya").value;
-let c=document.getElementById("commune");
+let wilaya = document.getElementById("wilaya").value;
+let commune = document.getElementById("commune");
 
-c.innerHTML="";
+commune.innerHTML = "";
 
-if(w=="أم البواقي"){
-c.innerHTML+="<option>أم البواقي</option>";
-c.innerHTML+="<option>عين البيضاء</option>";
-c.innerHTML+="<option>عين مليلة</option>";
-}
+if(communes[wilaya]){
 
-if(w=="قسنطينة"){
-c.innerHTML+="<option>قسنطينة</option>";
-c.innerHTML+="<option>الخروب</option>";
-}
+communes[wilaya].forEach(function(city){
 
-if(w=="باتنة"){
-c.innerHTML+="<option>باتنة</option>";
-c.innerHTML+="<option>بريكة</option>";
+let option = document.createElement("option");
+option.text = city;
+option.value = city;
+commune.add(option);
+
+});
+
+}else{
+
+commune.innerHTML="<option>اختر البلدية</option>";
+
 }
 
 }
 
 </script>
-
-</body>
-</html>
